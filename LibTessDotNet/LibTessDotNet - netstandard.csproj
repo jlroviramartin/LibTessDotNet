@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>LibTessDotNet</AssemblyName>
+    <RootNamespace>LibTessDotNet</RootNamespace>
+    <NoWarn>1701;1702;CS0078;CS1570;CS1574;CS1584;CS1587;CS1591;CS1658</NoWarn>
+
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;DOUBLE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;DOUBLE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugDouble|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG;DOUBLE</DefineConstants>
+
+    <RootNamespace>LibTessDotNet.Double</RootNamespace>
+    <AssemblyName>LibTessDotNet.Double</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseDouble|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;DOUBLE</DefineConstants>
+
+    <RootNamespace>LibTessDotNet.Double</RootNamespace>
+    <AssemblyName>LibTessDotNet.Double</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <OutputPath>..\Build\$(Configuration)</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <IntermediateOutputPath>$(OutputPath)\Int\$(AssemblyName)\$(Configuration)\</IntermediateOutputPath>
+    <Description>C# port of the famous GLU Tesselator
+0b90acbb-a704-4703-9d2f-fc3fbc5eb697</Description>
+    <Company>N/A</Company>
+    <PackageLicenseUrl>LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/speps/LibTessDotNet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/speps/LibTessDotNet</RepositoryUrl>
+    <Authors></Authors>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>
